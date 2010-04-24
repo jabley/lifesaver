@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This is the HORIZONTAL version -->
+<LinearLayout android:id="@+id/restoring"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<LinearLayout android:orientation="vertical" android:id="@+id/restoreprogress"
+		android:layout_weight="50" android:layout_width="0dip"
+		android:layout_height="fill_parent" android:gravity="center">
+		<TextView android:layout_width="fill_parent" android:id="@+id/restoringTitle"
+			android:layout_height="wrap_content" android:text="Bringing It Back:"
+			android:gravity="center" android:textStyle="bold" android:textSize="20sp"
+			android:paddingTop="12sp" />
+		<TextView android:layout_width="fill_parent" android:id="@+id/cpLabel"
+			android:layout_height="wrap_content" android:paddingTop="10sp"
+			android:gravity="center_horizontal" android:textSize="20sp"
+			android:paddingBottom="10sp" android:text="Your phone calls" />
+		<ProgressBar android:id="@+id/callProgress"
+			android:progress="0" style="?android:attr/progressBarStyleHorizontal"
+			android:layout_height="wrap_content" android:layout_width="fill_parent" 
+			android:paddingLeft="50dip" android:paddingRight="50dip" />
+		<TextView android:layout_width="fill_parent" android:id="@+id/mpLabel"
+			android:layout_height="wrap_content" android:paddingTop="10sp"
+			android:gravity="center_horizontal" android:textSize="20sp"
+			android:paddingBottom="10sp" android:text="Your messages" />
+		<ProgressBar android:id="@+id/messageProgress"
+			android:progress="0" style="?android:attr/progressBarStyleHorizontal"
+			android:layout_height="wrap_content" android:layout_width="fill_parent" 
+			android:paddingLeft="50dip" android:paddingRight="50dip" />
+	</LinearLayout>
+	<RelativeLayout android:layout_weight="50"
+		android:id="@+id/restoreBottom" android:layout_width="0dip"
+		android:layout_height="fill_parent">
+		<ImageView android:id="@+id/savingBuoy" android:gravity="center"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:src="@drawable/redbuoy" android:layout_centerInParent="true" />
+		<TextView android:id="@+id/restoredOK" android:layout_width="wrap_content"
+			android:textStyle="bold" android:textSize="36sp"
+			android:layout_height="wrap_content" android:text="OK"
+			android:visibility="gone" android:layout_centerInParent="true" />
+	</RelativeLayout>
+</LinearLayout>
+

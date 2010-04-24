@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This is the VERTICAL version -->
+<LinearLayout android:id="@+id/container"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<LinearLayout android:orientation="horizontal" android:id="@+id/mainTop"
+		android:layout_weight="50" android:layout_height="0dip"
+		android:layout_width="fill_parent">
+		<TextView android:layout_width="0dip" android:id="@+id/topText"
+			android:layout_height="fill_parent" android:layout_weight="20"
+			android:text="Save\nyour\nlife." android:gravity="center"
+			android:lineSpacingMultiplier="1.2" android:textStyle="bold"
+			android:textSize="20sp" />
+		<ImageView android:layout_width="0dip" android:id="@+id/topBuoy"
+			android:layout_height="fill_parent" android:layout_weight="80"
+			android:src="@drawable/whitebuoy" />
+	</LinearLayout>
+	<LinearLayout android:orientation="horizontal" android:id="@+id/mainBottom"
+		android:layout_weight="50" android:layout_height="0dip"
+		android:layout_width="fill_parent">
+		<ImageView android:layout_height="fill_parent"
+			android:layout_width="0dip" android:layout_weight="80" android:id="@+id/bottomBuoy"
+			android:src="@drawable/redbuoy" />
+		<TextView android:layout_height="fill_parent" android:id="@+id/bottomText"
+			android:layout_width="0dip" android:layout_weight="20" android:text="Bring\nit\nback."
+			android:gravity="center" android:lineSpacingMultiplier="1.2"
+			android:textStyle="bold" android:textSize="20sp" />
+	</LinearLayout>
+</LinearLayout>
