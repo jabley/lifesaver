@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This is the VERTICAL version -->
+<LinearLayout android:id="@+id/save"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<LinearLayout android:orientation="vertical" android:id="@+id/saveprogress"
+		android:layout_weight="50" android:layout_height="0dip"
+		android:layout_width="fill_parent" android:gravity="center">
+		<TextView android:layout_width="fill_parent" android:id="@+id/savingTitle"
+			android:layout_height="wrap_content" android:text="Saving Your Life:"
+			android:gravity="center" android:textStyle="bold" android:textSize="20sp"
+			android:paddingTop="12sp" />
+		<TextView android:layout_width="fill_parent" android:id="@+id/sCpLabel"
+			android:layout_height="wrap_content" android:paddingTop="10sp"
+			android:gravity="center_horizontal" android:textSize="20sp"
+			android:paddingBottom="10sp" android:text="Your phone calls" />
+		<ProgressBar android:id="@+id/sCallProgress"
+			android:progress="0" style="?android:attr/progressBarStyleHorizontal"
+			android:layout_height="wrap_content" android:layout_width="fill_parent"
+			android:paddingLeft="50dip" android:paddingRight="50dip" />
+		<TextView android:layout_width="fill_parent" android:id="@+id/sMpLabel"
+			android:layout_height="wrap_content" android:paddingTop="10sp"
+			android:gravity="center_horizontal" android:textSize="20sp"
+			android:paddingBottom="10sp" android:text="Your messages" />
+		<ProgressBar android:id="@+id/sMessageProgress"
+			android:progress="0" style="?android:attr/progressBarStyleHorizontal"
+			android:layout_height="wrap_content" android:layout_width="fill_parent"
+			android:paddingLeft="50dip" android:paddingRight="50dip" />
+	</LinearLayout>
+	<RelativeLayout android:layout_weight="50" android:id="@+id/saveBottom"
+		android:layout_height="0dip" android:layout_width="fill_parent">
+		<ImageView android:id="@+id/savingBuoy" android:gravity="center"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:src="@drawable/whitebuoy" android:layout_centerInParent="true" />
+		<TextView android:id="@+id/savedOK" android:layout_width="wrap_content"
+			android:textStyle="bold" android:textSize="36sp"
+			android:layout_height="wrap_content" android:text="OK"
+			android:visibility="gone" android:layout_centerInParent="true" />
+	</RelativeLayout>
+</LinearLayout>
