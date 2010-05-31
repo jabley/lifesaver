@@ -74,6 +74,11 @@ public class Columns {
         }
         return c.getString(key1Index) + "/" + c.getString(key2Index);
     }
+    
+    public boolean hasField(Cursor c, String name) {
+    	int i = c.getColumnIndex(name);
+    	return ((i != -1) && !c.isNull(i));
+    }
 
     public JSONObject cursorToJSON(Cursor cursor) {
         setColumns(cursor);

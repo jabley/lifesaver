@@ -27,11 +27,10 @@ public class ColumnsFactory {
 
     public static Columns messages() {
         String[] names = { "person", "status", "address", "read", "subject",
-                "body", "service_center", "date" };
+                "body", "service_center", "date", "type" };
         Class<?> types[] = { Integer.TYPE, Integer.TYPE, String.class,
                 String.class, String.class, String.class, String.class,
-                Long.TYPE };
+                Long.TYPE, Integer.TYPE };
         return new Columns(names, types, "address", "date");
     }
-
 }

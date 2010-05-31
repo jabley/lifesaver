@@ -82,9 +82,9 @@ public class Saver extends Activity {
             savedCalls = 0;
             float denominator = calls.getCount() / 100.0F;
             while (calls.moveToNext()) {
-                print.println(call.cursorToJSON(calls));
-                savedCalls += 1;
-                sCallProgress.setProgress((int) (savedCalls / denominator));
+            	print.println(call.cursorToJSON(calls));
+            	savedCalls += 1;
+            	sCallProgress.setProgress((int) (savedCalls / denominator));
             }
             calls.close();
             print.close();
@@ -100,12 +100,17 @@ public class Saver extends Activity {
             print = Files.printMessageLog(context);
             print.println(messages.getCount());
             savedMessages = 0;
-            denominator = messages.getCount() / 100.0F;
+            float total = messages.getCount();
+            denominator = total / 100.0F;
             while (messages.moveToNext()) {
-                print.println(message.cursorToJSON(messages));
-                savedMessages += 1;
-                sMessageProgress
-                        .setProgress((int) (savedMessages / denominator));
+            	if (message.hasField(messages, "address")) {
+            		print.println(message.cursorToJSON(messages));
+            		savedMessages += 1;
+            		sMessageProgress.setProgress((int) (savedMessages / denominator));
+            	} else {
+            		total -= 1;
+            		denominator = total / 100.0F;
+            	}
             }
             print.close();
             messages.close();
