@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">LifeSaver</string>
-    <string name="overwriteCheck">A life has already been saved on this phone. May I wipe it out and replace it?</string>
+    <string name="app_name">LifeSaver2</string>
+    <string name="overwriteCheck">A life has already been saved on this device. May I wipe it out and replace it?</string>
     <string name="wipeIt">Wipe it out!</string>
     <string name="doNotOverWrite">"Oops, please don't."</string>
     <string name="horribleError">Horrible error while engaged in life-saving:</string>
@@ -11,6 +11,7 @@
     <string name="storageInUse">External storage is being used via USB</string>
     <string name="unknownProblem">"External storage can't be used (not sure why)"</string>
     <string name="cantSave">"Can't save your life; "</string>
+    <string name="noSavedLifeFound">No saved life found on this device.</string>
     <string name="savedCalls">saved calls...</string>
     <string name="savedMessages">saved messages...</string>
     <string name="restored">Restored</string>
@@ -18,4 +19,5 @@
     <string name="messages">messages</string>
     <string name="saving">Saving</string>
     <string name="saved">Saved</string>
+    <string name="cantReadLife">Saved life is unreadable.</string>
 </resources>
